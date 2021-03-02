@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Subprincipal it renders the component? 1`] = `
-<div class="container">
-  <h1>Subprincipal</h1> <img src="https://picsum.photos/200/300" alt="">
+<div class="container subprincipal">
+  <h1>Subprincipal</h1> <img src="https://picsum.photos/200/300" alt="Imagen random">
 </div>
 `;

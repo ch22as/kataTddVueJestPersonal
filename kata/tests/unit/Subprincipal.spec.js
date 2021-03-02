@@ -23,4 +23,16 @@ describe('Subprincipal', () =>{
         expect(h1().exists()).toBe(true);
         expect(img().exists()).toBe(true);
     })
+
+    it('h1', () => {
+        const { h1 } = build();
+
+        expect(h1().text()).toEqual("Subprincipal");
+    })
+
+    it('img', () => {
+        const { img } = build();
+
+        expect(img().attributes().alt).toEqual("Imagen random")
+    })
 })
