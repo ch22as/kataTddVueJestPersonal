@@ -1,0 +1,1 @@
+Colocar Principal.vue en 'src/views' y Subprincipal y Worker en 'src/components'.

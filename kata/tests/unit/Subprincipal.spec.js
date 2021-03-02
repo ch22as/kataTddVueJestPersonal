@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import Subprincipal from '@/components/Subprincipal';
+import Worker from '@/components/Worker.vue'
 
 const build = () =>{
     const wrapper = mount(Subprincipal);
@@ -7,7 +8,8 @@ const build = () =>{
     return {
         wrapper,
         h1: () => wrapper.find('h1'),
-        img: () => wrapper.find('img')
+        img: () => wrapper.find('img'),
+        worker: () => wrapper.findComponent(Worker) 
     }
 }
 
@@ -18,10 +20,11 @@ describe('Subprincipal', () =>{
     });
 
     it('it render right?', () =>{
-        const { h1, img} = build();
+        const { h1, img, worker} = build();
 
         expect(h1().exists()).toBe(true);
         expect(img().exists()).toBe(true);
+        expect(worker().exists()).toBe(true);
     })
 
     it('h1', () => {
